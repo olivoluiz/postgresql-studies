@@ -1,0 +1,19 @@
+CREATE TABLE students (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    age INT,
+    course VARCHAR(100)
+);
+
+INSERT INTO students (name, age, course)
+VALUES
+('Lucas', 20, 'Software Engineering'),
+('Maria', 22, 'Computer Science'),
+('Joao', 19, 'Systems Analysis');
+
+SELECT * FROM students;
+UPDATE students
+SET age = 21
+WHERE id = 1;
+DELETE FROM students
+WHERE id = 3;
